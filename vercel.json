@@ -1,5 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "npx pnpm@12.4.1 install",
   "buildCommand": "bun run build:vercel",
+  "ignoreCommand": "node scripts/vercelIgnoredBuildStep.js",
   "headers": [
     {
       "source": "/_spa/(.*)",
@@ -49,8 +53,6 @@
       ]
     }
   ],
-  "ignoreCommand": "node scripts/vercelIgnoredBuildStep.js",
-  "installCommand": "npx pnpm@12.4.1 install",
   "rewrites": [
     {
       "source": "/_dangerous_local_dev_proxy",
